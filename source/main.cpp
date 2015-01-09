@@ -54,12 +54,12 @@ int main(int argc, char* args[])
 
 	// Pate!
 	Texture pate;
-	window.loadTexture(&pate, "pate.png");
+	window.loadTexture(&pate, "gfx/pate.png");
 	Sprite throwAnimation(&window, &pate, pate.getWidth()/3, pate.getHeight(), 3, 6);
 
 	game.spawnVirus(virusCount, virusLevel);
 
-	Music ost("ost001.wav");
+	Music ost("sfx/ost001.wav");
 	ost.play();
 
 	while(!quit) {

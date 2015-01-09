@@ -61,7 +61,7 @@ bool Texture::printText(std::string textureText, int fontSize, SDL_Color color)
 	//Get rid of preexisting texture
 	free();
 	
-	TTF_Font *primaryFont = TTF_OpenFont("PressStart2P.ttf", fontSize);
+	TTF_Font *primaryFont = TTF_OpenFont("fonts/PressStart2P.ttf", fontSize);
 	
 	if (primaryFont == NULL) {
 		printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );

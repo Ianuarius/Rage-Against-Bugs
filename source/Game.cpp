@@ -12,7 +12,7 @@ Game::Game(Window* window, Board* board) {
 
 	// Taustakuva
 	background.setRenderer(mWindow->renderer);
-	background.loadFromFile("taustakuva.png");
+	background.loadFromFile("gfx/taustakuva.png");
 	backgroundRect.w = 256;
 	backgroundRect.h = 240;
 	backgroundRect.x = 0;
@@ -20,7 +20,7 @@ Game::Game(Window* window, Board* board) {
 
 	// Ruukku
 	pot.setRenderer(mWindow->renderer);
-	pot.loadFromFile("ruukku.png");
+	pot.loadFromFile("gfx/ruukku.png");
 	potRect.w = 164;
 	potRect.h = 166;
 	potRect.x = 0;
@@ -64,27 +64,27 @@ void Game::drawBoard() {
 		for (int j = 0; j < BOARD_WIDTH; j++) {
 				switch(mBoard->getBlock(j, i)) {
 				case 1: 
-					deadBlock.loadFromFile("siemen_vihr_d.png");
+					deadBlock.loadFromFile("gfx/siemen_vihr_d.png");
 					break;
 
 				case 4:
-					deadBlock.loadFromFile("siemen_sin_d.png");
+					deadBlock.loadFromFile("gfx/siemen_sin_d.png");
 					break;
 
 				case 16: 
-					deadBlock.loadFromFile("siemen_kelt_d.png");
+					deadBlock.loadFromFile("gfx/siemen_kelt_d.png");
 					break;
 
 				case 2:
-					deadBlock.loadFromFile("virus_vihr.png");
+					deadBlock.loadFromFile("gfx/virus_vihr.png");
 					break;
 
 				case 8:
-					deadBlock.loadFromFile("virus_sin.png");
+					deadBlock.loadFromFile("gfx/virus_sin.png");
 					break;
 
 				case 32:
-					deadBlock.loadFromFile("virus_kelt.png");
+					deadBlock.loadFromFile("gfx/virus_kelt.png");
 					break;
 
 				default:
@@ -130,27 +130,27 @@ void Game::drawPiece(Piece *piece) {
 
 			switch(piece->getBlock(rotation, i, j)) {
 			case 1: 
-				siemenTekstuuri.loadFromFile("siemen_vihr_h.png");
+				siemenTekstuuri.loadFromFile("gfx/siemen_vihr_h.png");
 				break;
 
 			case 4:
-				siemenTekstuuri.loadFromFile("siemen_sin_h.png");
+				siemenTekstuuri.loadFromFile("gfx/siemen_sin_h.png");
 				break;
 
 			case 16: 
-				siemenTekstuuri.loadFromFile("siemen_kelt_h.png");
+				siemenTekstuuri.loadFromFile("gfx/siemen_kelt_h.png");
 				break;
 
 			case 2:
-				siemenTekstuuri.loadFromFile("virus_vihr.png");
+				siemenTekstuuri.loadFromFile("gfx/virus_vihr.png");
 				break;
 
 			case 8:
-				siemenTekstuuri.loadFromFile("virus_sin.png");
+				siemenTekstuuri.loadFromFile("gfx/virus_sin.png");
 				break;
 
 			case 32:
-				siemenTekstuuri.loadFromFile("virus_kelt.png");
+				siemenTekstuuri.loadFromFile("gfx/virus_kelt.png");
 				break;
 
 			default:
