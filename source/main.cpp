@@ -29,7 +29,9 @@ int main(int argc, char* args[])
 	Window window(800, 600, "Rage Against Bugs");
 	SDL_Event event;
 	bool quit = false;
-	Timer gameTimer;
+
+	// Timers
+	Timer gameTimer, gameLength;
 	gameTimer.start();
 
 	Texture levelText, levelTextShadow;
@@ -39,6 +41,7 @@ int main(int argc, char* args[])
 	levelText.setRenderer(window.renderer);
 	levelTextShadow.setRenderer(window.renderer);
 
+	// Text
 	levelText.printText("Level 1", 16, white);
 	levelTextShadow.printText("Level 1", 16, black);
 
@@ -146,6 +149,7 @@ int main(int argc, char* args[])
 		levelTextShadow.render(75, 40);
 		levelText.render(74, 39);
 
+		// Play throw animation
 		throwAnimation.render(222, 81);
 
 		// Refresh screen and cap framerate
@@ -153,6 +157,7 @@ int main(int argc, char* args[])
 		window.capFramerate(120);
 	}
 
+	gameLength.stop();
 	levelTextShadow.free();
 	levelText.free();
 
